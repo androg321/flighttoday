@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>노선 추천기</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -27,74 +31,22 @@
           <span>장거리</span>
         </label>
       </div>
-      <div id="sub-radio-group" class="radio-group">
-        <label>
-          <input type="radio" name="subRouteType" value="incheon" />
-          <span>인천발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="gimpo" />
-          <span>김포발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="gimhae" />
-          <span>김해발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="jeju" />
-          <span>제주발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="daegu" />
-          <span>대구발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="cheongju" />
-          <span>청주발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="random" />
-          <span>전체 랜덤</span>
-        </label>
-      </div>
-      <div id="short-radio-group" class="radio-group">
-        <label>
-          <input type="radio" name="subRouteType" value="incheon" />
-          <span>인천발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="gimpo" />
-          <span>김포발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="gimhae" />
-          <span>김해발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="jeju" />
-          <span>제주발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="daegu" />
-          <span>대구발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="cheongju" />
-          <span>청주발</span>
-        </label>
-        <label>
-          <input type="radio" name="subRouteType" value="random" />
-          <span>전체 랜덤</span>
-        </label>
-      </div>
       <button class="btn btn-primary" onclick="recommendRoute()">
         노선 추천
       </button>
-      <div id="progress">
+      <div id="progress" class="progress-container">
         <div class="spinner-border text-primary" role="status">
           <span class="sr-only">Loading...</span>
         </div>
-        <div>노선을 고르고 있습니다...</div>
+        <div class="progress-text">노선을 고르고 있습니다...</div>
+        <div class="progress" style="margin-top: 10px">
+          <div
+            id="progress-bar"
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            style="width: 0%"
+          ></div>
+        </div>
       </div>
       <div id="route"></div>
     </div>
